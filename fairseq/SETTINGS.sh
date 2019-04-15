@@ -1,10 +1,11 @@
 #!usr/bin/bash
-EXPERIMENT_DIR=~/fairseq
+HOME_DIR=~/
+EXPERIMENT_DIR=${HOME_DIR}/Experiment
 NAME=EXP
 MODEL_DIR=$EXPERIMENT_DIR/checkpoints/$NAME
 TRAIN_DATA_DIR=$EXPERIMENT_DIR/data-bin/$NAME
-TEXT=~/pure
-TRAIN_SET=~/train_set
+TEXT=${HOME_DIR}/pure
+TRAIN_SET=${HOME_DIR}/train_set
 TRAIN_DATA=train_bpe30k.shuf
 VALID_DATA=mt02_u8
 TEST_DATA=mt03_u8
