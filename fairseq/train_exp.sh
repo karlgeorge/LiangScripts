@@ -1,7 +1,7 @@
 source SETTINGS.sh
 export CUDA_VISIBLE_DEVICES=2
-python -u train.py $TRAIN_DATA_DIR \
-    --arch transformer \
+python -u train.py $COMPILED_DATA_DIR \
+    --arch $EXPERIMENT_ARCH \
     --optimizer adam --adam-betas '(0.9, 0.98)' --clip-norm 0.0 \
     --lr-scheduler inverse_sqrt --warmup-init-lr 1e-07 --warmup-updates 4000 \
     --lr 0.0007 --min-lr 1e-09 \
